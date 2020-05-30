@@ -12,7 +12,7 @@ export default class App extends Component {
     characters: [],
     showHeader: true,
     page: 1,
-    bgColor:'white'
+    bgColor: 'white',
   }
 
 
@@ -44,11 +44,11 @@ export default class App extends Component {
   darkMode = () => {
     if (this.state.bgColor =='white') {
       this.setState({
-        bgColor: 'black'
+        bgColor: 'black',
       })
     } else {
       this.setState({
-        bgColor: 'white'
+        bgColor: 'white',
       })
     }
   }
@@ -56,7 +56,7 @@ export default class App extends Component {
   render() {
     return (
       <div className='app' style={{ backgroundColor: this.state.bgColor }}>
-        
+
         {this.state.bgColor == 'white' ? <button onClick={this.darkMode}>Dark Mode</button> : <button onClick={this.darkMode}>Light Mode</button>}
         
         <button onClick={this.headerToggle}>Hide Header</button>
